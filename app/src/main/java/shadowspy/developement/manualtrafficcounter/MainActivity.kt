@@ -1,5 +1,6 @@
 package shadowspy.developement.manualtrafficcounter
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -22,56 +23,84 @@ class MainActivity : AppCompatActivity() {
         //Value for reset button
         val buttonReset = findViewById<Button>(R.id.btnReset)
 
-        //Variabel to store counter
+        //Value for mode button
+        val buttonMode = findViewById<Button>(R.id.btnMode)
+
+        //Variable to store counter
         var car = 0
         var motorcycle = 0
         var bus = 0
         var truck =0
 
+        //Variable to store add or reduction mode
+        var mode = true
+
         //Button Listener For Car
         buttonCar1.setOnClickListener{
-            car ++
+            if(mode){
+                car ++
+            }else car--
+
             buttonCar1.setText("CAR : $car")
             buttonCar2.setText("CAR : $car")
         }
         buttonCar2.setOnClickListener{
-            car ++
+            if(mode){
+                car ++
+            }else car --
+
             buttonCar1.setText("CAR : $car")
             buttonCar2.setText("CAR : $car")
         }
 
         //Button Listener for Motorcycle
         buttonMotorcycle1.setOnClickListener{
-            motorcycle ++
+            if(mode){
+                motorcycle ++
+            }else motorcycle --
+
             buttonMotorcycle1.setText("MOTORCYCLE : $motorcycle")
             buttonMotorcycle2.setText("MOTORCYCLE : $motorcycle")
         }
         buttonMotorcycle2.setOnClickListener{
-            motorcycle ++
+            if(mode){
+                motorcycle ++
+            }else motorcycle --
+
             buttonMotorcycle1.setText("MOTORCYCLE : $motorcycle")
             buttonMotorcycle2.setText("MOTORCYCLE : $motorcycle")
         }
 
         //Button Listener for Truck
         buttonTruck1.setOnClickListener{
-            truck ++
+            if(mode){
+                truck ++
+            }else truck --
+
             buttonTruck1.setText("TRUCK : $truck")
             buttonTruck2.setText("TRUCK : $truck")
         }
         buttonTruck2.setOnClickListener{
-            truck ++
+            if(mode){
+                truck ++
+            }else truck --
+
             buttonTruck1.setText("TRUCK : $truck")
             buttonTruck2.setText("TRUCK : $truck")
         }
 
         //Button Listener for Bus
         buttonBus1.setOnClickListener {
-            bus ++
+            if(mode){
+                bus ++
+            }else bus --
             buttonBus1.setText("BUS : $bus")
             buttonBus2.setText("BUS : $bus")
         }
         buttonBus2.setOnClickListener {
-            bus ++
+            if(mode){
+                bus ++
+            }else bus --
             buttonBus1.setText("BUS : $bus")
             buttonBus2.setText("BUS : $bus")
         }
@@ -92,6 +121,19 @@ class MainActivity : AppCompatActivity() {
             buttonBus2.setText("BUS : $bus")
         }
 
+        //Button Listener for Mode
+        buttonMode.setOnClickListener{
+            if(mode) {
+                mode = false;
+                buttonMode.setText("REDUCTION MODE");
+                buttonMode.setBackgroundColor(Color.RED)
+            }else {
+                mode = true;
+                buttonMode.setText("ADD MODE");
+                buttonMode.setBackgroundColor(Color.GREEN)
+            }
+
+        }
 
     }
 }
