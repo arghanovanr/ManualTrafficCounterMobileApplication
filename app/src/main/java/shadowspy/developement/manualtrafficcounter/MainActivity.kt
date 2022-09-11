@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         //Value for all button counter
         val buttonCar1 = findViewById<Button>(R.id.btnCar1)
         val buttonCar2 = findViewById<Button>(R.id.btnCar2)
@@ -35,20 +37,24 @@ class MainActivity : AppCompatActivity() {
         //Variable to store add or reduction mode
         var mode = true
 
+        var logList = mutableListOf<String>()
+
         //Button Listener For Car
         buttonCar1.setOnClickListener{
             if(mode){
                 car ++
+                logList.add(" $car Car recorded")
             }else car--
-
+            logList.add(" $car Car recorded")
             buttonCar1.setText("CAR : $car")
             buttonCar2.setText("CAR : $car")
         }
         buttonCar2.setOnClickListener{
             if(mode){
                 car ++
+                logList.add(" $car Car recorded")
             }else car --
-
+            logList.add(" $car Car recorded")
             buttonCar1.setText("CAR : $car")
             buttonCar2.setText("CAR : $car")
         }
@@ -57,16 +63,18 @@ class MainActivity : AppCompatActivity() {
         buttonMotorcycle1.setOnClickListener{
             if(mode){
                 motorcycle ++
+                logList.add(" $motorcycle Motorcycle recorded")
             }else motorcycle --
-
+            logList.add(" $motorcycle Motorcycle recorded")
             buttonMotorcycle1.setText("MOTORCYCLE : $motorcycle")
             buttonMotorcycle2.setText("MOTORCYCLE : $motorcycle")
         }
         buttonMotorcycle2.setOnClickListener{
             if(mode){
                 motorcycle ++
+                logList.add(" $motorcycle Motorcycle recorded")
             }else motorcycle --
-
+            logList.add(" $motorcycle Motorcycle recorded")
             buttonMotorcycle1.setText("MOTORCYCLE : $motorcycle")
             buttonMotorcycle2.setText("MOTORCYCLE : $motorcycle")
         }
@@ -75,16 +83,18 @@ class MainActivity : AppCompatActivity() {
         buttonTruck1.setOnClickListener{
             if(mode){
                 truck ++
+                logList.add(" $truck Truck recorded")
             }else truck --
-
+            logList.add(" $truck Truck recorded")
             buttonTruck1.setText("TRUCK : $truck")
             buttonTruck2.setText("TRUCK : $truck")
         }
         buttonTruck2.setOnClickListener{
             if(mode){
                 truck ++
+                logList.add(" $truck Truck recorded")
             }else truck --
-
+            logList.add(" $truck Truck recorded")
             buttonTruck1.setText("TRUCK : $truck")
             buttonTruck2.setText("TRUCK : $truck")
         }
@@ -93,14 +103,18 @@ class MainActivity : AppCompatActivity() {
         buttonBus1.setOnClickListener {
             if(mode){
                 bus ++
+                logList.add(" $bus Bus recorded")
             }else bus --
+            logList.add(" $bus Bus recorded")
             buttonBus1.setText("BUS : $bus")
             buttonBus2.setText("BUS : $bus")
         }
         buttonBus2.setOnClickListener {
             if(mode){
                 bus ++
+                logList.add(" $bus Bus recorded")
             }else bus --
+            logList.add(" $bus Bus recorded")
             buttonBus1.setText("BUS : $bus")
             buttonBus2.setText("BUS : $bus")
         }
