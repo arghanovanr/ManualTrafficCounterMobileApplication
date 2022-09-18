@@ -76,7 +76,7 @@
             android:id="@+id/btnMode"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/purple"
             android:text="Add Mode"
             android:textColor="@color/white"
             android:layout_gravity="center"/>
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="@color/green"
+            android:backgroundTint="@color/red"
             android:text="Reset"
             android:textColor="@color/white"
             />
