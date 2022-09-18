@@ -8,124 +8,145 @@
     android:padding="16sp"
     tools:context=".MainActivity">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnCar1"
                 android:layout_height="match_parent"
+                android:layout_width="wrap_content"
                 android:backgroundTint="@color/orange"
+                android:layout_weight="1"
                 android:text="CAR : 0" />
 
             <Button
                 android:id="@+id/btnTruck1"
                 android:layout_height="match_parent"
+                android:layout_width="wrap_content"
                 android:backgroundTint="@color/yellow"
+                android:layout_weight="1"
                 android:text="TRUCK : 0" />
 
             <Button
                 android:id="@+id/btnBus1"
                 android:layout_height="match_parent"
+                android:layout_width="wrap_content"
                 android:backgroundTint="@color/green"
+                android:layout_weight="1"
                 android:text="BUS : 0" />
 
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnMotocyle1"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:backgroundTint="@color/blue"
                 android:text="Motorcycle : 0" />
 
-        </TableRow>
+        </LinearLayout>
 
-    </TableLayout>
+    </LinearLayout>
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+        <Button
+            android:id="@+id/btnMode"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Add Mode"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
 
-            <Button
-                android:id="@+id/btnMode"
-                android:layout_gravity="center"
-                android:backgroundTint="#3DDC84"
-                android:text="Add Mode" />
-        </TableRow>
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/black"
+            android:text="Reset"
+            android:textColor="@color/white"
+            />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/btnReset"
-                android:layout_gravity="center"
-                android:backgroundTint="#009688"
-                android:text="RESET" />
-        </TableRow>
-
-    </TableLayout>
-
-    <TableLayout
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            >
-
-            <Button
-                android:id="@+id/btnBus2"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/green"
-                android:text="BUS : 0" />
-
-            <Button
-                android:id="@+id/btnTruck2"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/yellow"
-                android:text="TRUCK : 0" />
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnCar2"
                 android:layout_height="match_parent"
+                android:layout_width="wrap_content"
                 android:backgroundTint="@color/orange"
+                android:layout_weight="1"
                 android:text="CAR : 0" />
-        </TableRow>
 
-        <TableRow
+            <Button
+                android:id="@+id/btnTruck2"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/yellow"
+                android:layout_weight="1"
+                android:text="TRUCK : 0" />
+
+            <Button
+                android:id="@+id/btnBus2"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/green"
+                android:layout_weight="1"
+                android:text="BUS : 0" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:layout_weight="1">
 
             <Button
                 android:id="@+id/btnMotocyle2"
                 android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
                 android:backgroundTint="@color/blue"
-                android:layout_weight="3"
                 android:text="Motorcycle : 0" />
-        </TableRow>
 
-    </TableLayout>
+        </LinearLayout>
 
+    </LinearLayout>
 
 </LinearLayout>
